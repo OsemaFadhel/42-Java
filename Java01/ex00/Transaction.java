@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:57:31 by ofadhel           #+#    #+#             */
-/*   Updated: 2024/04/30 16:01:33 by ofadhel          ###   ########.fr       */
+/*   Updated: 2024/04/30 17:25:00 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,14 @@ public class Transaction
 
 	public Transaction(User recipient, User sender, String transferCategory, double transferAmount)
 	{
-		if (transferAmount <= 0)
-			throw new IllegalArgumentException("Transfer amount must be greater than 0");
-		if (sender.getBalance() < transferAmount)
-			throw new IllegalArgumentException("Sender does not have enough balance to make this transfer");
+		if (transferAmount < 0){
+			System.out.printf("Balance cannot be negative\n");
+			System.exit(1);
+		}
+		if (sender.getBalance() < transferAmount){
+			System.out.printf("Insufficient funds\n");
+			System.exit(1);
+		}
 		this.identifier = UUID.randomUUID();
 		this.recipient = recipient;
 		this.sender = sender;
