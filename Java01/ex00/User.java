@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:55:09 by ofadhel           #+#    #+#             */
-/*   Updated: 2024/04/30 05:48:04 by ofadhel          ###   ########.fr       */
+/*   Updated: 2024/04/30 15:51:06 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,22 @@ public class User
 		this.name = name;
 		this.balance = balance;
 	}
-	public int getIdentifier()
+	public int getIdentifier(){
 		return identifier;
-	public void setIdentifier(int identifier)
+	}
+	public void setIdentifier(int identifier){
 		this.identifier = identifier;
-	public String getName()
+	}
+	public String getName(){
 		return name;
-	public void setName(String name)
+	}
+	public void setName(String name){
 		this.name = name;
-	public double getBalance()
+	}
+	public double getBalance(){
 		return balance;
-	public void setBalance(double balance)
+	}
+	public void setBalance(double balance){
 		this.balance = balance;
+	}
 }

@@ -6,11 +6,12 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:57:41 by ofadhel           #+#    #+#             */
-/*   Updated: 2024/04/24 17:57:41 by ofadhel          ###   ########.fr       */
+/*   Updated: 2024/04/30 16:05:47 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-public class Main
+
+public class Program
 {
 	public static void main(String[] args) {
 		User user1 = new User(1, "John", 1000.0);

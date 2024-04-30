@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:57:31 by ofadhel           #+#    #+#             */
-/*   Updated: 2024/04/30 05:49:45 by ofadhel          ###   ########.fr       */
+/*   Updated: 2024/04/30 16:01:33 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,34 @@ public class Transaction
 		sender.setBalance(sender.getBalance() - transferAmount);
 		recipient.setBalance(recipient.getBalance() + transferAmount);
 	}
-	public UUID getIdentifier()
+	public UUID getIdentifier(){
 		return identifier;
-	public void setIdentifier(UUID identifier)
+	}
+	public void setIdentifier(UUID identifier){
 		this.identifier = identifier;
-	public User getRecipient()
+	}
+	public User getRecipient(){
 		return recipient;
-	public void setRecipient(User recipient)
+	}
+	public void setRecipient(User recipient){
 		this.recipient = recipient;
-	public User getSender()
+	}
+	public User getSender(){
 		return sender;
-	public void setSender(User sender)
+	}
+	public void setSender(User sender){
 		this.sender = sender;
-	public String getTransferCategory()
+	}
+	public String getTransferCategory(){
 		return transferCategory;
-	public void setTransferCategory(String transferCategory)
+	}
+	public void setTransferCategory(String transferCategory){
 		this.transferCategory = transferCategory;
-	public double getTransferAmount()
+	}
+	public double getTransferAmount(){
 		return transferAmount;
-	public void setTransferAmount(double transferAmount)
+	}
+	public void setTransferAmount(double transferAmount){
 		this.transferAmount = transferAmount;
+	}
 }
