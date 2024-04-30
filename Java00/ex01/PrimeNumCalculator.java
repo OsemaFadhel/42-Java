@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 17:22:00 by ofadhel           #+#    #+#             */
-/*   Updated: 2024/04/28 18:49:51 by ofadhel          ###   ########.fr       */
+/*   Updated: 2024/04/30 21:34:21 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ public class PrimeNumCalculator
 				break;
 			}
 		}
-
+		
 		System.out.printf(isPrime + " " + steps + "\n");
 		System.exit(0);
 	}
