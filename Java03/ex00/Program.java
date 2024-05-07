@@ -6,7 +6,7 @@
 /*   By: ofadhel <ofadhel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 16:07:52 by ofadhel           #+#    #+#             */
-/*   Updated: 2024/05/06 16:27:20 by ofadhel          ###   ########.fr       */
+/*   Updated: 2024/05/07 11:23:04 by ofadhel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,20 @@ public class Program {
 			return;
 		}
 		// Create the threads
-		Eggthread egg = new Eggthread();
-		Henthread hen = new Henthread();
+		Eggthread egg = new Eggthread(count);
+		Henthread hen = new Henthread(count);
+
 		// Start the threads
-		for (int i = 0; i < count; i++) {
-			egg.start();
-			hen.start();
+		egg.start();
+		hen.start();
+		try {
+			egg.join();
+			hen.join();
+		} catch (InterruptedException e) {
+			System.out.println("Error: join");
 		}
-		System.out.println("Human");
+		for (int i = 0; i < count; i++) {
+			System.out.println("Human");
+		}
 	}
 }
